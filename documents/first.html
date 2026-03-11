@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Holy Anthonian Orthodox Church</title>
+
+    <style>
+      .lord-loop {
+        text-align: center;
+        color: red;
+        font-size: 38px;
+        font-weight: bold;
+        font-family: "Times New Roman", Georgia, serif;
+        margin: 14px 0 18px 0;
+        line-height: 1.5;
+      }
+
+      .lord-line {
+        min-height: 1.5em;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #3c1488;
+      }
+
+      /* GOLD ORTHODOX BUTTON */
+
+      .enter-faith-button {
+        display: block;
+        width: 460px;
+        margin: 50px auto;
+        padding: 24px;
+        text-align: center;
+        background: linear-gradient(#f6d365, #d4af37);
+        color: #7a0000;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Times New Roman", Georgia, serif;
+        text-decoration: none;
+        border-radius: 12px;
+        border: 3px solid #b8962e;
+        box-shadow:
+          0 0 15px rgba(255, 215, 0, 0.7),
+          0 0 35px rgba(255, 215, 0, 0.5);
+        transition: all 0.25s ease;
+      }
+
+      .enter-faith-button:hover {
+        background: linear-gradient(#ffe08a, #e2c35c);
+        transform: scale(1.05);
+        box-shadow:
+          0 0 25px rgba(255, 215, 0, 0.9),
+          0 0 55px rgba(255, 215, 0, 0.7);
+      }
+
+      /* smoke animation */
+
+      .smoke-area {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        overflow: hidden;
+      }
+
+      .smoke {
+        position: absolute;
+        bottom: -250px;
+        width: 180px;
+        height: 520px;
+        background: linear-gradient(
+          to top,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0.12),
+          rgba(255, 255, 255, 0)
+        );
+        filter: blur(24px);
+        animation: smokeRise 9s infinite;
+      }
+
+      .smoke:nth-child(1) {
+        left: 2%;
+        animation-delay: 0s;
+      }
+      .smoke:nth-child(2) {
+        left: 10%;
+        animation-delay: 1s;
+      }
+      .smoke:nth-child(3) {
+        left: 18%;
+        animation-delay: 2s;
+      }
+      .smoke:nth-child(4) {
+        left: 26%;
+        animation-delay: 0.5s;
+      }
+      .smoke:nth-child(5) {
+        left: 34%;
+        animation-delay: 1.5s;
+      }
+      .smoke:nth-child(6) {
+        left: 42%;
+        animation-delay: 2.5s;
+      }
+      .smoke:nth-child(7) {
+        left: 50%;
+        animation-delay: 0.8s;
+      }
+      .smoke:nth-child(8) {
+        left: 58%;
+        animation-delay: 1.8s;
+      }
+      .smoke:nth-child(9) {
+        left: 66%;
+        animation-delay: 2.8s;
+      }
+      .smoke:nth-child(10) {
+        left: 74%;
+        animation-delay: 1.2s;
+      }
+      .smoke:nth-child(11) {
+        left: 82%;
+        animation-delay: 2.2s;
+      }
+      .smoke:nth-child(12) {
+        left: 90%;
+        animation-delay: 3s;
+      }
+
+      @keyframes smokeRise {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.95;
+        }
+        30% {
+          transform: translateY(-250px) scale(1.4) translateX(60px);
+          opacity: 0.75;
+        }
+        60% {
+          transform: translateY(-700px) scale(2.1) translateX(-50px);
+          opacity: 0.45;
+        }
+        85% {
+          transform: translateY(-1100px) scale(2.8) translateX(70px);
+          opacity: 0.18;
+        }
+        100% {
+          transform: translateY(-1400px) scale(3.2);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <audio id="bg-audio" controls autoplay loop>
+      <source src="REC_20260310_142206.m4a" type="audio/mp4" />
+    </audio>
+
+    <div style="text-align: center; margin-bottom: 20px">
+      <button onclick="document.getElementById('bg-audio').play()">
+        Play Background Audio
+      </button>
+    </div>
+
+    <div class="lord-loop">
+      <div class="lord-line" id="line1"></div>
+      <div class="lord-line" id="line2"></div>
+      <div class="lord-line" id="line3"></div>
+    </div>
+
+    <!-- ENTER BUTTON -->
+
+    <a href="indexsmoking.html" class="enter-faith-button">
+      ENTER IF YOU SEEK FAITH
+    </a>
+
+    <script>
+      const line1 = document.getElementById("line1");
+      const line2 = document.getElementById("line2");
+      const line3 = document.getElementById("line3");
+
+      function runLordLoop() {
+        line1.textContent = "";
+        line2.textContent = "";
+        line3.textContent = "";
+
+        setTimeout(() => {
+          line1.textContent = "Lord Jesus Christ";
+        }, 0);
+
+        setTimeout(() => {
+          line2.textContent = "Son of God";
+        }, 2000);
+
+        setTimeout(() => {
+          line3.textContent = "Have Mercy on Me";
+        }, 4000);
+
+        setTimeout(() => {
+          line1.textContent = "";
+          line2.textContent = "";
+          line3.textContent = "";
+        }, 7000);
+      }
+
+      runLordLoop();
+      setInterval(runLordLoop, 8000);
+    </script>
+  </body>
+</html>

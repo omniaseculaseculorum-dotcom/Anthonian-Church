@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Requests</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f5f5f5;
+      }
+
+      h1 {
+        text-align: center;
+        color: red;
+        font-size: 48px;
+        font-weight: bold;
+      }
+
+      .message {
+        text-align: center;
+        color: red;
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+
+      .return-button {
+        display: block;
+        width: 220px;
+        margin: 60px auto 0 auto;
+        padding: 16px;
+        text-align: center;
+        background-color: #8b0000;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 8px;
+      }
+
+      .return-button:hover {
+        background-color: #b30000;
+      }
+    </style>
+  </head>
+
+  <body onclick="document.getElementById('churchAudio').play()">
+    <!-- AUDIO -->
+    <audio id="churchAudio" loop>
+      <source src="REC_20260310_204749.m4a" type="audio/mp4" />
+    </audio>
+
+    <img
+      src="data:image/jpeg;base64,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"
+      style="display: block; margin: auto; max-width: 400px"
+    />
+
+    <br /><br />
+
+    <a href="index.html" class="return-button">Return Home</a>
+
+    <h1>Prayer Requests</h1>
+
+    <div class="message"><b>Leave your prayer requests here</b></div>
+    <button onclick="(() => playAudio())()">PLay audio</button>
+  </body>
+
+  <script>
+    // Source - https://stackoverflow.com/a/18628124
+// Posted by Uri, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-03-11, License - CC BY-SA 4.0
+function playAudio(){
+  console.log('called')
+var audio = new Audio('./REC_20260310_142206.m4a');
+audio.play();
+
+}
+
+
+  </script>
+</html>
